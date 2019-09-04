@@ -6,4 +6,4 @@ called map.php.
 
 Copyright 2019 University of St Andrews
 Licensed under the terms of the
-[MIT Licensei](https://opensource.org/licenses/MIT)
+[MIT License](https://opensource.org/licenses/MIT)

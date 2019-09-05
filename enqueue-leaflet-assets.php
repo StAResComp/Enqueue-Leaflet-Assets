@@ -31,11 +31,19 @@
 
 defined( 'ABSPATH' ) or die( 'No script kiddies please!' );
 
-function enqueue_leaflet_assets_enqueue_assets() {
+function enqueue_leaflet_assets_enqueue_leaflet_assets() {
     if (is_page_template('map.php')) {
         wp_enqueue_style('leaflet-style','https://unpkg.com/leaflet@1.5.1/dist/leaflet.css','all');
         wp_enqueue_script('leaflet-script','https://unpkg.com/leaflet@1.5.1/dist/leaflet.js');
     }
 }
 
-add_action('wp_enqueue_scripts', 'enqueue_leaflet_assets_enqueue_assets');
+function enqueue_leaflet_assets_enqueue_tabulator_assets() {
+    if (is_page_template('map.php')) {
+        wp_enqueue_style('tabulator-style','https://unpkg.com/tabulator-tables@4.4.1/dist/css/tabulator.min.css','all');
+        wp_enqueue_script('tabulator-script','https://unpkg.com/tabulator-tables@4.4.1/dist/js/tabulator.min.js');
+    }
+}
+
+add_action('wp_enqueue_scripts', 'enqueue_leaflet_assets_enqueue_leaflet_assets');
+add_action('wp_enqueue_scripts', 'enqueue_leaflet_assets_enqueue_tabulator_assets');

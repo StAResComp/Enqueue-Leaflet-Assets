@@ -3,7 +3,7 @@
  * Plugin Name: Enqueue Leaflet Assets
  * Plugin URI: https://github.com/StAResComp/Enqueue-Leaflet-Assets
  * Description: Enqueues the CSS and JavaScript necessary for Leaflet maps (https://leafletjs.com) when using a template called map.php
- * Version: 1.0
+ * Version: 1.1
  * Author: Patrick McCann
  * License: MIT
  * License URI: https://opensource.org/licenses/MIT
@@ -42,6 +42,16 @@ function enqueue_leaflet_assets_enqueue_tabulator_assets() {
     if (is_page_template('map.php')) {
         wp_enqueue_style('tabulator-style','https://unpkg.com/tabulator-tables@4.4.1/dist/css/tabulator.min.css','all');
         wp_enqueue_script('tabulator-script','https://unpkg.com/tabulator-tables@4.4.1/dist/js/tabulator.min.js');
+        wp_enqueue_style('marker-cluster-style','https://unpkg.com/browse/leaflet.markercluster@1.4.1/dist/MarkerCluster.css','all');
+        wp_enqueue_style('marker-cluster-default-style','https://unpkg.com/browse/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css','all');
+        wp_enqueue_script('marker-cluster-script','https://unpkg.com/browse/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js');
+    }
+}
+
+function enqueue_leaflet_assets_enqueue_tabby_assets() {
+    if (is_page_template('map.php')) {
+        wp_enqueue_style('tabby-style','https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12/dist/css/tabby.min.css','all');
+        wp_enqueue_script('tabby-script','https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12/dist/js/tabby.polyfills.min.js');
     }
 }
 

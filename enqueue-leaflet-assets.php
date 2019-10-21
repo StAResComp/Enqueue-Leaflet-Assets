@@ -57,3 +57,4 @@ function enqueue_leaflet_assets_enqueue_tabby_assets() {
 
 add_action('wp_enqueue_scripts', 'enqueue_leaflet_assets_enqueue_leaflet_assets');
 add_action('wp_enqueue_scripts', 'enqueue_leaflet_assets_enqueue_tabulator_assets');
+add_action('wp_enqueue_scripts', 'enqueue_leaflet_assets_enqueue_tabby_assets');

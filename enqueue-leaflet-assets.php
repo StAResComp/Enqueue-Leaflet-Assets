@@ -50,7 +50,7 @@ function enqueue_leaflet_assets_enqueue_tabulator_assets() {
 
 function enqueue_leaflet_assets_enqueue_tabby_assets() {
     if (is_page_template('map.php')) {
-        wp_enqueue_style('tabby-style','https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12/dist/css/tabby.min.css','all');
+        wp_enqueue_style('tabby-style','https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12/dist/css/tabby-ui.min.css','all');
         wp_enqueue_script('tabby-script','https://cdn.jsdelivr.net/gh/cferdinandi/tabby@12/dist/js/tabby.polyfills.min.js');
     }
 }

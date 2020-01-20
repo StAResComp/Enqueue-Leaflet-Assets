@@ -58,8 +58,8 @@ function enqueue_leaflet_assets_enqueue_tabby_assets() {
 
 function enqueue_leaflet_assets_enqueue_linkify_assets() {
     if (is_page_template('map.php')) {
-        wp_enqueue_script('linkify','https://cdnjs.cloudflare.com/ajax/libs/jQuery-linkify/2.1.8/linkify.min.js',15);
-        wp_enqueue_script('linkify-jquery','https://cdnjs.cloudflare.com/ajax/libs/jQuery-linkify/2.1.8/linkify-jquery.min.js',15);
+        wp_enqueue_script('linkify','https://cdnjs.cloudflare.com/ajax/libs/jQuery-linkify/2.1.8/linkify.min.js',array('jquery'));
+        wp_enqueue_script('linkify-jquery','https://cdnjs.cloudflare.com/ajax/libs/jQuery-linkify/2.1.8/linkify-jquery.min.js',array('jquery','linkify'));
     }
 }
 
